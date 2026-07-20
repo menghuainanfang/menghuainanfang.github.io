@@ -356,7 +356,30 @@
         }
         .hero-social-row .social-icon-link.gh:hover { border-color: #333; background: #f5f5f5; }
         .hero-social-row .social-icon-link.email:hover { border-color: var(--pink); background: #fdf2f8; }
-        .hero-social-row .social-icon-link.blog:hover { border-color: var(--teal); background: #f0fdfa; }
+
+        /* 幽默奖项列表 */
+        .hero-awards {
+            margin-bottom: 14px; line-height: 1.9;
+        }
+        .hero-awards p {
+            font-size: 0.78rem; color: var(--text-lighter);
+            padding: 1px 0;
+        }
+
+        /* 正在做的事 */
+        .hero-doing {
+            margin-bottom: 20px;
+        }
+        .hero-doing p {
+            font-size: 0.9rem; color: var(--text-secondary);
+            padding: 3px 0; padding-left: 4px;
+            transition: color var(--transition);
+        }
+        .hero-doing p::before {
+            content: '· ';
+            color: var(--purple-light);
+            font-weight: 700;
+        }
 
         /* ========== 关于我 ========== */
         .about-cards {
@@ -747,8 +770,7 @@
         }
         .social-link-card:nth-child(1):hover { border-color: #333; background: #fafafa; }
         .social-link-card:nth-child(2):hover { border-color: var(--pink); background: #fdf2f8; }
-        .social-link-card:nth-child(3):hover { border-color: var(--teal); background: #f0fdfa; }
-        .social-link-card:nth-child(4):hover { border-color: var(--blue); background: #eff6ff; }
+        .social-link-card:nth-child(3):hover { border-color: var(--blue); background: #eff6ff; }
         .social-link-card .card-icon { font-size: 1.4rem; }
 
         /* ========== 页脚 ========== */
@@ -864,12 +886,12 @@
                 <span class="logo-dot"></span> 祁清玄
             </a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home" class="active" data-section="home">🏠 首页</a></li>
-                <li><a href="#about" data-section="about">🙋 关于我</a></li>
-                <li><a href="#skills" data-section="skills">🛠 技能</a></li>
-                <li><a href="#projects" data-section="projects">🚀 项目</a></li>
-                <li><a href="#ai-chat" data-section="ai-chat">🤖 AI助手</a></li>
-                <li><a href="#contact" data-section="contact">📬 联系</a></li>
+                <li><a href="#home" class="active" data-section="home">首页</a></li>
+                <li><a href="#about" data-section="about">关于我</a></li>
+                <li><a href="#skills" data-section="skills">技能</a></li>
+                <li><a href="#projects" data-section="projects">项目</a></li>
+                <li><a href="#ai-chat" data-section="ai-chat">AI助手</a></li>
+                <li><a href="#contact" data-section="contact">联系</a></li>
             </ul>
             <button class="hamburger" id="hamburgerBtn" aria-label="菜单">
                 <span class="bar"></span><span class="bar"></span><span class="bar"></span>
@@ -885,10 +907,7 @@
             <div class="hero-grid">
                 <div class="hero-avatar-wrapper">
                     <div class="hero-avatar">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="12" cy="7" r="4.5"/>
-                            <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"/>
-                        </svg>
+                        <img src="avatar.jpg" alt="头像" style="width:100%;height:100%;border-radius:50%;object-fit:cover;">
                     </div>
                     <div class="avatar-rings">
                         <div class="avatar-ring"></div>
@@ -896,25 +915,34 @@
                     </div>
                 </div>
                 <div class="hero-info">
-                    <div class="hero-status">
-                        <span class="status-dot"></span> 暑期探索中 · 正在捣鼓AI小工具
-                    </div>
                     <h1 class="hero-name">
-                        嘿，我是 <span class="highlight">祁清玄</span> 👋
+                        泥嚎，我是 <span class="highlight">祁清玄</span>
                     </h1>
                     <p class="hero-meta">
-                        🎓 信息与计算科学 · 准大三 · 代码&数学双修中
+                        个人主页，用于存放创作
                     </p>
+                    <div class="hero-awards">
+                        <p>2008 感动中国组委会特别奖得主</p>
+                        <p>2006《时代周刊》年度风云人物</p>
+                        <p>2022 奥林匹克杯联合获奖者</p>
+                        <p>联合国 2019 地球卫士奖（蚂蚁森林共建人）</p>
+                        <p>诺贝尔文学奖终身读者</p>
+                    </div>
                     <p class="hero-bio">
-                        喜欢用代码把想法变成现实 ✨
-                        最近沉迷AI应用开发，相信<span class="emoji-accent">🤖</span> + <span class="emoji-accent">📊</span> + <span class="emoji-accent">💡</span>能让学习和生活变得更有趣。
-                        除了写代码，平时也爱看科幻小说、打乒乓球、研究各种效率工具。
+                        平时读读历史和古文，看看推理和科幻。<br>偶尔做做白日梦，写点诗和文字。
                     </p>
+                    <div class="hero-doing">
+                        <p>敲打数学公式 ing……</p>
+                        <p>调教 AI ing……</p>
+                        <p>品读名家经典 ing……</p>
+                    </div>
                     <div class="hero-social-row">
-                        <a href="https://github.com/menghuainanfang" target="_blank" rel="noopener" class="social-icon-link gh" title="GitHub">🐙</a>
-                        <a href="mailto:1025144371@qq.com" class="social-icon-link email" title="邮箱">📧</a>
-                        <a href="#" class="social-icon-link blog" title="博客">📝</a>
-                        <a href="#" class="social-icon-link" title="B站" style="font-size:1rem;">📺</a>
+                        <a href="https://github.com/menghuainanfang" target="_blank" rel="noopener" class="social-icon-link gh" title="GitHub">
+                            <svg width="22" height="22" viewBox="0 0 16 16" fill="currentColor" style="display:block;">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                            </svg>
+                        </a>
+                        <a href="https://space.bilibili.com/396293709?spm_id_from=333.788.0.0" target="_blank" rel="noopener" class="social-icon-link" title="B站" style="font-size:1rem;">📺</a>
                     </div>
                 </div>
             </div>
@@ -1146,16 +1174,14 @@
             <p class="section-subtitle">欢迎交流！不管是对项目感兴趣、想一起学习，还是单纯想聊聊天 👇</p>
             <div class="social-links-row">
                 <a href="https://github.com/menghuainanfang" target="_blank" rel="noopener" class="social-link-card">
-                    <span class="card-icon">🐙</span> GitHub
+                    <span class="card-icon">
+                        <svg width="22" height="22" viewBox="0 0 16 16" fill="currentColor" style="display:block;">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                    </span> GitHub
                 </a>
-                <a href="mailto:1025144371@qq.com" class="social-link-card">
-                    <span class="card-icon">📧</span> 邮箱
-                </a>
-                <a href="#" class="social-link-card">
-                    <span class="card-icon">📝</span> 博客
-                </a>
-                <a href="#" class="social-link-card">
-                    <span class="card-icon">💬</span> 微信
+                <a href="https://space.bilibili.com/396293709?spm_id_from=333.788.0.0" target="_blank" rel="noopener" class="social-link-card">
+                    <span class="card-icon">📺</span> B站
                 </a>
             </div>
         </section>
