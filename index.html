@@ -7,14 +7,29 @@
   <meta name="theme-color" content="#b13b2d">
   <title>祁清玄</title>
   <style>
+    @font-face {
+      font-family: "QXChinese";
+      src: url("./assets/noto-sans-sc-subset.ttf") format("truetype");
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "QXLatin";
+      src: url("./assets/barlow-condensed-bold-subset.ttf") format("truetype");
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+    }
+
     :root {
       --paper: #efe8d8;
       --ink: #111210;
       --red: #b13b2d;
       --signal: #da4933;
       --page: 1220px;
-      --font-cn: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-      --font-latin: "Arial Narrow", "Segoe UI", "PingFang SC", sans-serif;
+      --font-cn: "QXChinese", sans-serif;
+      --font-latin: "QXLatin", "QXChinese", sans-serif;
     }
 
     *, *::before, *::after { box-sizing: border-box; }
